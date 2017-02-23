@@ -18,3 +18,38 @@
   font-weight: 100;
   color: white;
 }
+
+.hero {
+  background: image_url('hero2.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 425px;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar {
+  margin: 0;
+}
+
+.frosty {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  box-shadow: 0px 3px 8px #2a2a2a;
+}
+
+.frosty h1 {
+  font-family: 'Cabin', sans-serif;
+  font-weight: 100;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.95);
+}
+
+.frosty h2 {
+  font-family: 'Cabin', sans-serif;
+  font-weight: 200;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.95);
+}
+
+.btn {
+  border-radius: 0;
+}
