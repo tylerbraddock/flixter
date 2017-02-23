@@ -1,6 +1,11 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Cabin');
 
+body {
+  background: image_url('bg.png');
+  font-family: 'Cabin', Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .navbar {
   font-family: 'Cabin', sans-serif;
   font-weight: 200;
@@ -52,4 +57,10 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 .btn {
   border-radius: 0;
+}
+
+.feature {
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 15px;
 }
