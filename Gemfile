@@ -57,3 +57,6 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 
 # Include Simple Form
 gem 'simple_form'
+
+# User Authentication
+gem 'devise'
