@@ -67,7 +67,10 @@ gem 'carrierwave', '~> 1.0'
 gem "figaro"
 
 # Use for carrierwave to Amazon S3 communication
-gem "fog"
+# gem "fog"
 
 # Use for image manipulation
 gem "mini_magick"
+
+# Replaces fog gem for carrierwave to Amazon S3 communication
+gem 'carrierwave-aws'
