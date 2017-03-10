@@ -74,3 +74,6 @@ gem "mini_magick"
 
 # Replaces fog gem for carrierwave to Amazon S3 communication
 gem 'carrierwave-aws'
+
+# Use for payments
+gem 'stripe'
