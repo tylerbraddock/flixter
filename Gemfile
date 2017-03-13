@@ -77,3 +77,6 @@ gem 'carrierwave-aws'
 
 # Use for payments
 gem 'stripe'
+
+# Use for changing lesson order
+gem 'ranked-model'
