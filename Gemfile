@@ -80,3 +80,6 @@ gem 'stripe'
 
 # Use for changing lesson order
 gem 'ranked-model'
+
+# Include jquery-ui-rails
+gem 'jquery-ui-rails'
