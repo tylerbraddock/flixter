@@ -29,17 +29,18 @@
 <br />
 
 <div class="booyah-box col-10 offset-1">
-  <h1 class="text-center"><%= current_course.title %></h1>
+  <h1 class="text-center title-marg"><%= current_course.title %></h1>
   <div class="text-center">
     <%= image_tag current_course.image, class: 'img-fluid' %>
   </div>
   <br />
-  <%= link_to 'Preview As Student...', course_path(current_course), class: 'btn btn-warning float-right' %>
-  <br class="clr" />
-
-  <div class="text-center">
-    <%= link_to 'Add a new section...', new_instructor_course_section_path(current_course), class: 'btn btn-success btn-lg' %>
+  <div class="text-center button-align">
+    <%= link_to 'Preview Course', course_path(current_course), class: 'btn btn-danger float-left' %>
+    <%= link_to 'New Section', new_instructor_course_section_path(current_course), class: 'btn btn-success float-right' %>
+    <br class="clr" />
   </div>
+
+
 
   <ul class="sections">
     <% current_course.sections.rank(:row_order).each do |section| %>
@@ -48,18 +49,17 @@
           <i class="fa fa-sort" aria-hidden="true"></i>
           <%= section.title %>
         </div>
-        <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'btn btn-success btn-sm float-right' %>
-        <br class="clr" />
+        <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'btn btn-success btn-sm float-right lsn-btn' %>
         <br class="clr" />
         <ul class="lessons">
           <% section.lessons.rank(:row_order).each do |lesson| %>
-            <li data-update-url="<%= instructor_lesson_path(lesson) %>">
+            <li data-update-url="<%= instructor_lesson_path(lesson) %>" class="gradient">
               <div class="row">
                 <div class="col-1 point">
                   <br />
                   <i class="fa fa-sort" aria-hidden="true"></i>
                 </div>
-                <div class="col-11 text-center point">
+                <div class="col-10 text-center point">
                   <p><b><%= lesson.title %></b></p>
                   <p><%= lesson.subtitle %></p>
                 </div>
