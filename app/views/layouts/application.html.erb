@@ -61,10 +61,51 @@
 
     <div id="footer">
       <div class="container">
-        <b>Teachers</b>
-        <br />
-        <%= link_to 'Teach a Course', new_instructor_course_path %>
+        <div class="row">
+          <div class="col-12 col-sm-3">
+            <b>Teachers</b>
+            <ul>
+              <li><%= link_to 'Teach a Course', new_instructor_course_path %></li>
+              <li><%= link_to 'My Dashboard', dashboard_path %></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-3">
+            <b>About</b>
+            <ul>
+              <li><%= link_to 'Team', '#' %></li>
+              <li><%= link_to 'Careers', '#' %></li>
+              <li><%= link_to 'Privacy Policy', '#' %></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-3">
+            <b>Contact</b>
+            <ul>
+              <li>fpdapps@gmail.com</li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-3">
+            <b>Social</b>
+            <ul>
+              <li>
+                <%= link_to 'https://github.com/tylerbraddock' do %>
+                  <i class="fa fa-github-square fa-2x social-button" aria-hidden="true"></i>
+                <% end %>
+                <%= link_to 'https://www.facebook.com/tyler.braddock.90' do %>
+                  <i class="fa fa-facebook-square fa-2x social-button" aria-hidden="true"></i>
+                <% end %>
+                <%= link_to 'https://twitter.com/tylerbraddock01' do %>
+                  <i class="fa fa-twitter-square fa-2x social-button" aria-hidden="true"></i>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </div>
+
+
+
+
     </div>
 
     <script src="https://vjs.zencdn.net/5.17.0/video.js"></script>
