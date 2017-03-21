@@ -4,6 +4,15 @@
   <h1><%= current_lesson.title %></h1>
   <p><%= current_lesson.subtitle %></p>
 
+  <% if current_lesson.next_lesson.present? %>
+    <%= link_to lesson_path(current_lesson.next_lesson), class: 'btn btn-default float-right next-lsn-btn' do %>
+      Next Lesson &nbsp;
+      <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+    <% end %>
+  <% end %>
+
+  <br class="clr" />
+
   <video id="my-video" class="video-js vjs-big-play-centered vjs-fluid" controls preload="auto"
   poster="<%= image_path('black.jpg') %>" data-setup="{}">
     <source src="<%= current_lesson.video.to_s %>" type='video/mp4'>
