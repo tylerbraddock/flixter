@@ -64,9 +64,8 @@
 
         <br class="clr" />
 
-        <ul class="lessons row">
+        <ul class="lessons">
           <% section.lessons.rank(:row_order).each do |lesson| %>
-            <div class="col-12 col-sm-6">
             <li data-update-url="<%= instructor_lesson_path(lesson) %>" class="gradient lesson">
               <div class="row">
                 <div class="col-2 point">
@@ -80,7 +79,6 @@
               </div>
               <br class="clr" />
             </li>
-          </div>
           <% end %>
         </ul>
         <br class="clr" />
