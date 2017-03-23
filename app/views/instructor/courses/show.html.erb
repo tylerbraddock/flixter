@@ -33,18 +33,16 @@
   });
 </script>
 
-<br />
-
-<div class="booyah-box col-10 offset-1">
+<div class="booyah-box col-10 offset-1 booyah-top instruct-page">
   <h1 class="text-center title-marg"><%= current_course.title %></h1>
   <div class="text-center">
     <%= image_tag current_course.image, class: 'img-fluid' %>
   </div>
   <br />
   <div class="text-center button-align">
-    <%= link_to 'Preview Course', course_path(current_course), class: 'btn btn-danger float-left' %>
+    <%= link_to 'Preview Course', course_path(current_course), class: 'btn btn-danger float-left col-12 col-sm-5 col-md-4' %>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#newSectionModal">
+    <button type="button" class="btn btn-success float-right col-12 col-sm-5 col-md-4" data-toggle="modal" data-target="#newSectionModal">
       New Section
     </button>
     <br class="clr" />
@@ -54,8 +52,10 @@
     <% current_course.sections.rank(:row_order).each do |section| %>
       <li data-update-url="<%= instructor_section_path(section) %>" class="section-li">
         <div class="header point">
-          <i class="fa fa-sort" aria-hidden="true"></i>
-          <%= section.title %>
+          <h3>
+            <i class="fa fa-sort" aria-hidden="true"></i>
+            <%= section.title %>
+          </h3>
         </div>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-success btn-sm float-right lsn-btn new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
@@ -64,21 +64,23 @@
 
         <br class="clr" />
 
-        <ul class="lessons">
+        <ul class="lessons row">
           <% section.lessons.rank(:row_order).each do |lesson| %>
-            <li data-update-url="<%= instructor_lesson_path(lesson) %>" class="gradient">
+            <div class="col-12 col-sm-6">
+            <li data-update-url="<%= instructor_lesson_path(lesson) %>" class="gradient lesson">
               <div class="row">
-                <div class="col-1 point">
+                <div class="col-2 point">
                   <br />
                   <i class="fa fa-sort" aria-hidden="true"></i>
                 </div>
-                <div class="col-10 text-center point">
+                <div class="col-8 text-center point">
                   <p><b><%= lesson.title %></b></p>
                   <p><%= lesson.subtitle %></p>
                 </div>
               </div>
               <br class="clr" />
             </li>
+          </div>
           <% end %>
         </ul>
         <br class="clr" />

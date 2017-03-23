@@ -17,7 +17,7 @@ body {
   width: 100%;
   min-height: 100px;
   background-color: rgba(36, 32, 33, 0.9);
-  color: white;
+  color: #FFB073;
   font-family: 'Cabin', sans-serif;
   padding: 10px 0px;
   margin-top: 30px;
@@ -31,4 +31,18 @@ body {
 
 .social-button {
   margin: 4px;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  #footer .social {
+    padding-right: 0;
+  }
+
+  #footer .contact {
+    padding-left: 0;
+  }
+
+  #footer .contact li {
+    font-size: 0.9rem;
+  }
 }

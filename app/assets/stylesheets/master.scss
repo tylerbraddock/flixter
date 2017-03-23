@@ -21,15 +21,19 @@ body {
 
 .navbar-inverse a.navbar-brand {
   font-family: 'Cabin', sans-serif;
-  font-weight: 100;
-  color: white;
+  font-weight: 400;
+  color: #1D766F;
+  text-shadow: 0.25px 0.25px rgba(255, 255, 255, 0.5);
+}
+
+.navbar-inverse .navbar-toggler {
+  border-color: #1D766F;
 }
 
 .hero {
   background: image_url('hero2.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   height: 425px;
 }
@@ -47,12 +51,14 @@ h1, h2, h3, h4, h5, h6, .navbar {
 .frosty h1 {
   font-family: 'Cabin', sans-serif;
   font-weight: 100;
+  font-size: 2rem;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.95);
 }
 
 .frosty h2 {
   font-family: 'Cabin', sans-serif;
   font-weight: 200;
+  font-size: 1.5rem;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.95);
 }
 
@@ -90,15 +96,15 @@ a:hover, a:focus {
 }
 
 .devise-links a {
-  color: #3477bb;
+  color: #FFB073;
 }
 
 .devise-links a:hover, .devise-links a:focus {
-  color: #014c8c;
+  color: #FF6F00;
 }
 
 .form-control:focus {
-  border-color: #5CB85C;
+  border-color: #FFB073;
 }
 
 .help-block {
@@ -116,7 +122,8 @@ a:hover, a:focus {
 .lesson {
   background-color: black;
   margin-top: 10px;
-  height: 130px;
+  height: 100px;
+  padding-top: 15px;
 }
 
 .lesson a {
@@ -158,12 +165,11 @@ ul .header .fa {
 }
 
 .lessons li {
-  /*background: black;*/
   color: white;
-  margin: 10px;
+  margin-top: 10px;
   font-family: 'Cabin', sans-serif;
   font-weight: 100;
-  padding: 8px;
+  padding: 15px 8px 8px 8px;
   font-size: 15px;
 }
 
@@ -172,7 +178,7 @@ ul .header .fa {
   font-weight: 100;
 }
 
-.lessons li p {
+.lessons li p, .lsn-page p {
   margin: 0;
 }
 
@@ -192,23 +198,176 @@ ul .header .fa {
   margin-right: 20px;
 }
 
+.btn-success, .btn-success:active {
+  background-color: #1D766F;
+  border-color: #00665E;
+}
+
+.btn-success:hover {
+  background-color: #00665E;
+  border-color: #1D766F;
+}
+
+.btn-success:focus {
+  color: white;
+  box-shadow: 0 0 0 2px #33CEC3;
+}
+
+.btn-danger, .btn-danger:active {
+  background-color: #33CEC3;
+  border-color: #009D91;
+}
+
+.btn-danger:hover {
+  background-color: #009D91;
+  border-color: #33CEC3;
+}
+
+.btn-danger:focus {
+  color: white;
+  box-shadow: 0 0 0 2px #5DCEC6;
+}
+
+.learn-btn {
+  box-shadow: none;
+}
+
 .gradient {
   background-image: linear-gradient(to bottom, black, #403F3E);
 }
 
-.lsn-btn {
-  margin-right: 10px;
-  background-color: #00AA72;
+.next-lsn-btn {
+  color: #1D766F;
+  box-shadow: none;
+  padding-right: 0;
 }
 
-.next-lsn-btn {
-  margin-bottom: 10px;
+.next-lsn-btn:hover, .next-lsn-btn:focus {
+  color: #00665E;
 }
+
+.next-lsn-btn:focus {
+  box-shadow: 0 0 0 2px #33CEC3;
+}
+
 
 .booyah-top {
   margin-top: 34px;
 }
 
-.static-title {
-  margin-bottom: 10px;
+@media (min-width: 768px) {
+  .frosty h1 {
+    font-size: 2.5rem;
+  }
+
+  .frosty h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .feature-two {
+    border-top: 1px solid #FFB073;
+    border-bottom: 1px solid #FFB073;
+    padding-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .lsn-page h1, .crs-page h1, .instruct-page h1, .static-title, .crs-index h1, .dash-page h1 {
+    font-size: 1.35rem;
+  }
+
+  .crs-page h3, .crs-page h4, .instruct-page h3, .crs-index h3, .dash-page h3 {
+    font-size: 1.25rem;
+  }
+
+  .lessons li b, .lesson a b {
+    font-size: 19px;
+  }
+
+  .crs-description {
+    margin-top: 20px;
+  }
+
+  .descript {
+    margin-bottom: 16px;
+  }
+
+  .team-pics {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 576px) {
+  .crs-description {
+    border-left: 1px solid #FFB073;
+    padding-right: 30px;
+  }
+
+  .descript {
+    border-right: 1px solid #FFB073;
+  }
+}
+
+@media (max-width: 775px) {
+  .button-align {
+    float: none;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .button-align .btn-success {
+    margin: 0;
+  }
+
+  .button-align .btn-danger {
+    margin: 0 0 10px 0;
+  }
+
+}
+
+.lesson-vid {
+  border: 10px solid #1D766F;
+}
+
+.lsn-page h1, .crs-page h1, .crs-page h3, .instruct-page h1, .instruct-page h3, .crs-index h3, .dash-page h3, .static-title {
+  background-image: linear-gradient(to bottom, #1D766F, #009D91);
+  color: white;
+  margin-bottom: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+}
+
+.crs-description, .descript, .static-descript {
+  text-align: justify;
+}
+
+hr {
+  border-top: none;
+  border-bottom: 1px solid #FFB073;
+  margin-bottom: 0;
+}
+
+.crs-index h3 a, .dash-page h3 a {
+  color: white;
+}
+
+.crs-index h1, .dash-page h1 {
+  margin-bottom: 20px;
+}
+
+.crs-page h4 {
+  background-image: linear-gradient(to bottom, #FF9340, #FFB073);
+}
+
+.badge {
+  font-size: 1rem;
+}
+
+.enroll-btn {
+  padding-left: 32px;
+  padding-right: 32px;
 }
