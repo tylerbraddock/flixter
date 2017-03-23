@@ -371,3 +371,9 @@ hr {
   padding-left: 32px;
   padding-right: 32px;
 }
+
+@media (max-width: 1024px) {
+  .hero {
+    background: image_url('hero2.jpg') no-repeat center center;
+  }
+}
